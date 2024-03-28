@@ -1,0 +1,36 @@
+.register__content {
+    text-align: center
+}
+
+.form__group {
+    margin-top: 10px;
+}
+
+.form_input {
+    width: 300px;
+
+}
+
+.form__button {
+    margin-top: 10px;
+
+}
+
+.form__button-submit {
+    width: 300px;
+    background-color: #214BE0;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.login__text {
+    margin-top: 10px;
+    color: #909090;
+    font-size: small;
+}
+
+.form__error{
+    color: red;
+    font-size: small;
+}

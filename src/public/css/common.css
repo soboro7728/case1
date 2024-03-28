@@ -1,0 +1,105 @@
+html,
+body {
+    height: 100%;
+    background-color: #F2F2F2;
+    margin: 0;
+    /* 解決するため */
+    padding: 0;
+    /* 入れておくと無難 */
+}
+
+/* 文字 */
+body,
+textarea,
+input {
+    color: black;
+}
+
+
+/* きゅうヘッダー */
+/* .header {
+    display: grid;
+    align-items: center;
+    /* padding: 16px 0; */
+    /* height: 60px;
+    text-align: center;
+    background-color: #FFF;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+} */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 30px;
+    background-color: white;
+}
+
+.header__logo {
+    font-size: 24px;
+    width: 80px;
+}
+
+.header-nav-list {
+    display: flex;
+
+}
+
+.header-nav-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+/* フッター */
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: #FFF;
+    text-align: center;
+    position: absolute;
+    /*←絶対位置*/
+    bottom: 0;
+    /*下に固定*/
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.pagination li:not(.active) {
+    border: 3px solid #F2F2F2;
+    background-color: white;
+    padding: 4px 12px;
+}
+
+.pagination li:not(:last-child) {
+    border-right: none;
+}
+
+.pagination a {
+    color: #2384CF;
+    text-decoration: none;
+}
+
+.pagination__link {
+    text-decoration: none;
+}
+
+.active {
+    padding: 4px 12px;
+    border: 3px solid #F2F2F2;
+    background-color: #2384CF;
+    color: #FFF;
+}
+.header-nav-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+a{
+    text-decoration: none;
+}

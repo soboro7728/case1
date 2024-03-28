@@ -1,0 +1,39 @@
+.date__content {
+    text-align: center
+}
+
+.table-striped{
+    margin: 3px auto;
+
+}
+
+.date__label{
+    display: flex;
+    justify-content: center;
+}
+
+.table-striped td {
+    border: none;
+    border-top: 1px solid black;
+    padding: 5px 20px;
+
+}
+.table-striped th{
+    border: none;
+    border-top: 1px solid black;
+    /* background: #ad1414; */
+    padding: 5px 20px;
+}
+.date-nav__button{
+    color: #2384CF;
+    border: 1px solid #2384CF;
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.date-nav__button:disabled{
+    background-color:gray;
+    color: black;
+    border: 1px solid black;
+}

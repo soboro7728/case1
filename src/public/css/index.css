@@ -1,0 +1,23 @@
+.attendance__content {
+    text-align: center
+}
+
+.attendance__work{
+    display: flex;
+    justify-content: center;
+}
+.attendance__rest {
+    display: flex;
+    justify-content: center;
+}
+.attendance__button-submit{
+    background-color: white;
+    border: none;
+    padding: 40px 100px;
+    margin: 10px;
+    font-weight: bold
+}
+
+.attendance__text{
+    margin: 20px;
+}
