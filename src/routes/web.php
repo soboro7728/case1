@@ -25,15 +25,5 @@ Route::post('/work/rest/start', [TimeController::class, 'startrest']);
 Route::post('/work/rest/end', [TimeController::class, 'endrest']);
 Route::post('/work/end', [TimeController::class, 'endwork']);
 Route::get('/attendance', [AttendanceController::class, 'date_index']);
-
-// postじゃなくていいの？
-// Route::post('/attendance/nextdate', [AttendanceController::class, 'date_nextdate']);
-// ページネーションのルート？
 Route::get('/attendance/nextdate', [AttendanceController::class, 'date_nextdate']);
-// Route::post('/attendance/previousdate', [AttendanceController::class, 'date_previousdate']);
 Route::get('/attendance/previousdate', [AttendanceController::class, 'date_previousdate']);
-
-
-// テスト
-Route::get('/test',[AttendanceController::class, 'test']);
-// Route::get('/todos/search', [AttendanceController::class, 'search']);
