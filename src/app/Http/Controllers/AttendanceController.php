@@ -37,7 +37,7 @@ class attendanceController extends Controller
         $stamp_table = $oldstamp_table->sort()->values()->toArray();
         rsort($stamp_table);
         $stamp_day = $stamp_table[$num];
-        $stamp_dates = stamps::where('stamp_date', "$stamp_day")->paginate(1);
+        $stamp_dates = stamps::where('stamp_date', "$stamp_day")->paginate(5);
         return view('date', compact('stamp_dates', 'stamp_day', 'num', 'stamp_table'));
     }
     public function date_previousdate(Request $request)
@@ -66,11 +66,5 @@ class attendanceController extends Controller
         $stamp_dates = stamps::where('stamp_date', "$stamp_day")->paginate(5);
         return view('date', compact('stamp_dates', 'stamp_day', 'num', 'stamp_table'));
 
-        // 降順
-        // $onestamp_dates = stamps::select('stamp_date')->distinct()->get();
-        // $oldstamp_table = $onestamp_dates->pluck('stamp_date');
-        // $stamp_table = $oldstamp_table->sort()->values()->toArray();
-        // rsort($stamp_table);
-        // dd($stamp_table);
     }
 }
