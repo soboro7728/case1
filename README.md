@@ -33,9 +33,9 @@
 
 ## 環境構築
   ### Dockerビルド
-   1.git@github.com:soboro7728/case1.git
-   2.DockerDesktopアプリを立ち上げる
-   3.docker-compose up -d --build
+    1.git@github.com:soboro7728/case1.git
+    2.DockerDesktopアプリを立ち上げる
+    3.docker-compose up -d --build
   ### Laravel環境構築
    1.docker-compose exec php bash
    2.composer install
