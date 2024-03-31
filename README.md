@@ -22,7 +22,7 @@
 - Laravel8.83.27
 - MySQL8.0.26
 
-##テーブル設計
+##テーブル設計  
 ![スクリーンショット 2024-04-01 041031](https://github.com/soboro7728/case1/assets/49304045/093ed5ba-bc2e-4c19-bda3-91f9db16b245)
 
 
