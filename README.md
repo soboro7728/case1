@@ -22,12 +22,14 @@
 - Laravel8.83.27
 - MySQL8.0.26
 
-##テーブル設計  
+## テーブル設計  
 ![スクリーンショット 2024-04-01 041031](https://github.com/soboro7728/case1/assets/49304045/093ed5ba-bc2e-4c19-bda3-91f9db16b245)
 
 
-##ER図
-![case1](https://github.com/soboro7728/case1/assets/49304045/3ca55b43-657e-4b33-82ac-a038949b244f)
+## ER図
+![スクリーンショット 2024-04-01 041742](https://github.com/soboro7728/case1/assets/49304045/efc5f22e-cc1a-45b0-97c1-98458b34c17d)
+
+
 
 ##環境構築
   ###Dockerビルド
