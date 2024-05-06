@@ -55,16 +55,18 @@ class attendanceController extends Controller
         return view('date', compact('stamp_dates', 'stamp_day', 'num', 'stamp_table'));
     }
 
-    public function test()
+    public function userdate()
     {
-        $onestamp_dates = stamps::select('stamp_date')->distinct()->get();
-        $oldstamp_table = $onestamp_dates->pluck('stamp_date');
-        $stamp_table = $oldstamp_table->sort()->values()->toArray();
-        rsort($stamp_table);
-        $num = 0;
-        $stamp_day = $stamp_table[$num];
-        $stamp_dates = stamps::where('stamp_date', "$stamp_day")->paginate(5);
-        return view('date', compact('stamp_dates', 'stamp_day', 'num', 'stamp_table'));
+        $users = user::all();
+        return view('userdate')->with(['users' => $users]);
+    }
+
+    public function user__select(Request $request)
+    {
+        $users = user::all();
+        $user_id = $request->select_id;
+        $userdates = stamps::where('user_id', "$user_id")->latest('stamp_date')->paginate(5);
+        return view('userdate',compact('userdates'))->with(['users' => $users]);
 
     }
 }

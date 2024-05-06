@@ -16,8 +16,7 @@ use App\Http\Controllers\TimeController;
 |
 */
 
-
-Route::middleware('auth')->group(function () {
+Route::middleware('verified')->group(function () {
     Route::get('/', [TimeController::class, 'index']);
 });
 Route::post('/work/start', [TimeController::class, 'startwork']);
@@ -27,3 +26,8 @@ Route::post('/work/end', [TimeController::class, 'endwork']);
 Route::get('/attendance', [AttendanceController::class, 'date_index']);
 Route::get('/attendance/nextdate', [AttendanceController::class, 'date_nextdate']);
 Route::get('/attendance/previousdate', [AttendanceController::class, 'date_previousdate']);
+
+// 追加
+Route::get('/test', [TimeController::class, 'test']);
+Route::get('/userdate', [AttendanceController::class, 'userdate']);
+Route::get('/userdate/select', [AttendanceController::class, 'user__select']);

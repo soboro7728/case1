@@ -28,19 +28,26 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // 追加
+        Fortify::verifyEmailView(function () {
+            return view('auth.verify-email');
+        });
         Fortify::createUsersUsing(CreateNewUser::class);
         Fortify::registerView(function () {
-        return view('auth.register');
-    });
+            return view('auth.register');
+            // return view('test');
+        });
 
         Fortify::loginView(function () {
-        return view('auth.login');
-    });
+            return view('auth.login');
+        });
 
-    RateLimiter::for('login', function (Request $request) {
-        $email = (string) $request->email;
+        RateLimiter::for('login', function (Request $request) {
+            $email = (string) $request->email;
 
-        return Limit::perMinute(10)->by($email . $request->ip());
-    });
+            return Limit::perMinute(10)->by($email . $request->ip());
+        });
     }
+
+    
 }

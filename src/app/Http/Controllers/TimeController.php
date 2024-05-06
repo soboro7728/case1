@@ -86,14 +86,7 @@ class TimeController extends Controller
 
     public function test(Request $request)
     {
-        $auths = Auth::user();
-        $newtime = Carbon::now();
-        $today = Carbon::today();
-        $userid = $auths->id;
-        // 検索条件
-        $cond = ['user_id' => $userid, 'stamp_date' => $today];
-        $workdate = stamps::where($cond)->first();
-        dd($workdate);
         return view('test');
     }
+
 }
